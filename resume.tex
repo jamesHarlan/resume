@@ -1,0 +1,128 @@
+% LaTex file for resume
+% James Harlan
+\documentclass[11pt]{article}
+
+%set the page margins
+\usepackage[letterpaper,margin=0.7in]{geometry}
+
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{enumitem}
+\newenvironment{myitemize}
+{ \vspace{-0.5em}
+  \begin{itemize}
+    \setlength{\itemsep}{-5pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+}
+{ \end{itemize}
+  \vspace{-0.5em}
+}
+
+\newcommand*\minitem{
+  \vspace{-0.25em}
+  \item[$\cdot$]
+  \vspace{-0.25em}
+}
+
+\def\sectionindent{-10em}
+
+\newcommand*\majitem{
+  \vspace{-0.25em}
+  \item[$\circ$]
+  \vspace{-0.25em}
+}
+
+% \newcommand*\mysec{
+%   \setlength{\indent}{-0.25cm}
+%   \section
+% }
+
+\begin{document}
+\setlength{\tabcolsep}{0in}
+\pagenumbering{gobble}
+
+\begin{center}
+\begin{tabularx}{1.0\textwidth}{l X r}
+  \multirow{2}{*}{\Huge{James Harlan}}& & \href{http://www.jamesharlan.me}{\color{blue}jamesharlan.me} \\
+   & & \href{https://www.linkedin.com/in/highfalootin}{\color{blue}linkedin.com/in/highfalootin} \\
+  San Francisco Bay Area $\vert$ 307 247 3383 $\vert$ \href{mailto:james.harlan@gmail.com}{\color{blue}james.harlan@gmail.com} & & \href{http://github.com/jamesharlan}{\color{blue}github.com/jamesharlan}
+\end{tabularx}
+
+\vspace{2mm}
+
+%\rule{\textwidth}{0.75pt}
+
+\vspace{2mm}
+
+\begin{tabularx}{\textwidth}{r l X}
+  \textbf{Strong : } & JavaScript $\circ$ Angular $\circ$ Jasmine $\circ$ jQuery $\circ$ HTML $\circ$ CSS $\circ$ Agile $\circ$ Scrum & \\
+  \textbf{Proficient : } & Node $\circ$ Express $\circ$ Gulp $\circ$ Grunt $\circ$ Backbone $\circ$ MySQL $\circ$ MongoDB
+\end{tabularx}
+
+%\vspace{2mm}
+
+%\rule{\textwidth}{0.75pt}
+
+\end{center}
+\section*{Recent Projects}
+\noindent
+\textbf{MakerSquare} $\vert$ Fellow $\vert$ \emph{full-stack software engineering immersive} \\
+\begin{myitemize}
+  \majitem Provided technical guidance to students during completion of two day sprints on varied JavaScript topics \\
+  \majitem Lead classroom learning of web development basics in a nightly course \\
+  \majitem Interviewed and evaluated potential candidates for technical ability, cultural fit, and ability to learn \\
+\end{myitemize}
+\noindent
+\textbf{SquirrelSearch} $\vert$ Team Lead $\vert$ \emph{mobile treasure hunting web app} \href{http://squirrelsearch.us}{\color{blue}squirrelsearch.us} \\
+\begin{myitemize}
+  \majitem Lead development of product, emphasizing user experience and functionality \\
+  \majitem Specified API to facilitate early integration of data flow \\
+\end{myitemize}
+\noindent
+\textbf{JSVS} $\vert$ Backend Engineer $\vert$ \emph{coding race application for competition fueled learning} $\vert$ \href{https://github.com/TheFourLoops/JSVS}{\color{blue}github} \\
+\begin{myitemize}
+  \majitem Implemented Socket.IO server to connect users in a live coding experience \\
+\end{myitemize}
+
+\noindent
+\textbf{Emirates Travel Hackathon} $\vert$ 2nd Place Group $\vert$ \emph{social flight booking app}
+\section*{Professional}
+\noindent
+\begin{tabularx}{\textwidth}{l l X r}
+\textbf{Red Fork Directional, LLC} & Owner / Field Engineer & & 2014 \\
+\textbf{Halliburton Energy Services} & Field Engineer & & 2010-2013 \\
+\end{tabularx}
+\begin{myitemize}
+  \majitem Ensured third party hardware was correctly configured to meet engineering specification and project goals\\
+  \majitem Debugged complex systems and equipment to maintain operational efficiency \\
+  \majitem Managed team of fellow engineers to complete projects in timely and efficient manner \\
+\end{myitemize}
+
+\section*{Education}
+\begin{tabularx}{\textwidth}{p{5cm} l X r}
+  \textbf{MakerSquare} & \emph{full-stack software engineering immersive} & & 2015 \\
+\end{tabularx}
+\begin{tabularx}{\textwidth}{p{5cm} l X r}
+  \textbf{Univeristy of Wyoming} & \emph{College of Engineering and Applied Sciences} & & 2004-2010 \\
+\end{tabularx}
+% \vspace{-1em}
+\begin{myitemize}%[topsep=0pt]
+  %\setlength{\itemsep}{1.5em}
+  \majitem MA Mechanical Engineering \\
+  % \vspace{-1em}
+  \begin{myitemize}
+    %\setlength{\itemsep}{0.1cm}
+    \minitem Research in mateials science and fluid dynamics \\
+    \minitem Analyzed data in Fortran and visualized using MATLAB, simulated atomic interactions from first principles\\
+  \end{myitemize}
+  \majitem BA Mechanical Engineering $\vert$ merit scholarships and engineering excellence awards $\vert$ \emph{cum laude} \\
+  % \vspace{-1em}
+  \begin{myitemize}
+    \minitem Implemented control systems in robotic projects using \\
+    \minitem microcontrollers and motion control hardware  \\
+  \end{myitemize}
+\end{myitemize}
+\end{document}
