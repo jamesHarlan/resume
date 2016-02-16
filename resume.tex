@@ -1,6 +1,6 @@
 % LaTex file for resume
 % James Harlan
-\documentclass[11pt]{article}
+\documentclass[10pt]{article}
 
 %set the page margins
 \usepackage[letterpaper,margin=0.7in]{geometry}
@@ -10,14 +10,29 @@
 \usepackage{color}
 \usepackage{multirow}
 \usepackage{enumitem}
-\newenvironment{myitemize}
-{ \vspace{-0.5em}
+\setlist{nolistsep}
+
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+
+\newenvironment{roles}
+{ \vspace{0.25em}
   \begin{itemize}
-    \setlength{\itemsep}{-5pt}
-    \setlength{\parskip}{0pt}
-    \setlength{\parsep}{0pt}
+    \setlength{\itemsep}{-0.5em}
+    \setlength{\parskip}{0em}
+    \setlength{\parsep}{0em}
+    \setlength{\partopsep}{0pt}
+    \setlength{\topsep}{0pt}
 }
 { \end{itemize}
+  \vspace{0.5em}
+}
+
+\newenvironment{org}
+{ \noindent
+  \tabularx{\textwidth}{p{5cm} p{4cm} r Y }
+}
+{
+  \endtabularx
   \vspace{-0.5em}
 }
 
@@ -27,16 +42,19 @@
   \vspace{-0.25em}
 }
 
-\def\sectionindent{-10em}
+\newcommand*\nvssec{
+  \vspace{-2em}
+  \section*
+}
 
 \newcommand*\majitem{
   \vspace{-0.25em}
-  \item[$\circ$]
+  \item[]
   \vspace{-0.25em}
 }
 
 \begin{document}
-\setlength{\tabcolsep}{0in}
+
 \pagenumbering{gobble}
 
 \begin{center}
@@ -48,76 +66,106 @@
 
 \vspace{2mm}
 
-%\rule{\textwidth}{0.75pt}
-
-\vspace{2mm}
-
 \begin{tabularx}{\textwidth}{r X}
-  \textbf{Strong : } & JavaScript $\circ$ Angular $\circ$ Jasmine $\circ$ jQuery $\circ$ HTML $\circ$ CSS $\circ$ JSON $\circ$  Agile $\circ$ Scrum \\
-  \textbf{Proficient : } & Node.JS $\circ$ Express $\circ$ Gulp $\circ$ Grunt $\circ$ Backbone $\circ$ MySQL $\circ$ MongoDB $\circ$ Socket.IO $\circ$ D3 $\circ$ Mocha $\circ$ Chai \\
+  \textbf{Strong : } & JavaScript $\cdot$ Angular $\cdot$ Jasmine $\cdot$ jQuery $\cdot$ HTML $\cdot$ CSS $\cdot$ JSON $\cdot$  Agile $\cdot$ Scrum \\
+  \textbf{Proficient : } & Node.JS $\cdot$ Express $\cdot$ Gulp $\cdot$ Grunt $\cdot$ Backbone $\cdot$ MySQL $\cdot$ MongoDB $\cdot$ Socket.IO $\cdot$ D3 $\cdot$ Mocha $\cdot$ Chai $\cdot$ React $\cdot$ Jest \\
 \end{tabularx}
-
-%\vspace{2mm}
-
-%\rule{\textwidth}{0.75pt}
 
 \end{center}
-\section*{Recent Projects}
-\noindent
-\textbf{MakerSquare} $\vert$ Fellow $\vert$ \emph{full-stack software engineering immersive} \\
-\begin{myitemize}
-  \majitem Provided technical guidance to students during completion of two day sprints on varied JavaScript topics \\
-  \majitem Lead classroom learning of web development basics in a nightly course \\
-  \majitem Interviewed and evaluated potential candidates for technical ability, cultural fit, and ability to learn \\
-\end{myitemize}
-\noindent
-\textbf{SquirrelSearch} $\vert$ Team Lead $\vert$ \emph{mobile treasure hunting web app} \href{http://squirrelsearch.us}{\color{blue}squirrelsearch.us} \\
-\begin{myitemize}
-  \majitem Lead development of product, emphasizing user experience and functionality \\
-  \majitem Specified API to facilitate early integration of data flow \\
-\end{myitemize}
-\noindent
-\textbf{JSVS} $\vert$ Backend Engineer $\vert$ \emph{coding race application for competition fueled learning} $\vert$ \href{https://github.com/TheFourLoops/JSVS}{\color{blue}github} \\
-\begin{myitemize}
-  \majitem Implemented Socket.IO server to connect users in a live coding experience \\
-\end{myitemize}
 
-\noindent
-\textbf{Emirates Travel Hackathon} $\vert$ 2nd Place Group $\vert$ \emph{social flight booking app}
-\section*{Professional}
-\noindent
-\begin{tabularx}{\textwidth}{l l X r}
-\textbf{Red Fork Directional, LLC} & Owner / Field Engineer & & 2014 \\
-\textbf{Halliburton Energy Services} & Field Engineer & & 2010-2013 \\
-\end{tabularx}
-\begin{myitemize}
-  \majitem Ensured third party hardware was correctly configured to meet engineering specification and project goals\\
-  \majitem Debugged complex systems and equipment to maintain operational efficiency \\
-  \majitem Managed team of fellow engineers to complete projects in timely and efficient manner \\
-\end{myitemize}
+%============================ Recent Projects ==================
+\nvssec{Recent Projects}
 
-\section*{Education}
-\begin{tabularx}{\textwidth}{p{5cm} l X r}
-  \textbf{MakerSquare} & \emph{full-stack software engineering immersive} & & 2015 \\
-\end{tabularx}
-\begin{tabularx}{\textwidth}{p{5cm} l X r}
-  \textbf{Univeristy of Wyoming} & \emph{College of Engineering and Applied Sciences} & & 2004-2010 \\
-\end{tabularx}
-% \vspace{-1em}
-\begin{myitemize}%[topsep=0pt]
-  %\setlength{\itemsep}{1.5em}
+\begin{org}
+  \textbf{SquirrelSearch} & Team Lead & \emph{mobile treasure hunting web app} & \href{http://squirrelsearch.us}{\color{blue}squirrelsearch.us} \\
+\end{org}
+\begin{roles}
+  \minitem Lead development of product, emphasizing user experience and functionality \\
+  \minitem Specified API to facilitate early integration of data flow \\
+  \minitem Developed user story and corresponding story boards for application view implementation
+\end{roles}
+\vspace{0.25em}
+
+\begin{org}
+  \textbf{JSVS} & Backend Engineer & \emph{live coding app} & \href{https://github.com/TheFourLoops/JSVS}{\color{blue}github} \\
+\end{org}
+\begin{roles}
+  \minitem Connected users in rooms for predictable user experience using WebSockets \\
+  \minitem Deployed codebase to Heroku,
+\end{roles}
+
+\begin{org}
+  \textbf{Murmur} & Scrum Master & \emph{geolocation chat app} & \\
+\end{org}
+\begin{roles}
+  \minitem Tested front end components using Jest to maintain a working codebase during feature addition \\
+  \minitem Implemented sorting of message based on user proximity \\
+  \minitem Automated deployment process using Gulp \\
+\end{roles}
+
+\begin{org}
+  \textbf{Emirates Travel Hackathon} & 2nd Place Group & \emph{social flight booking app} & \\
+\end{org}
+
+\begin{org}
+  \textbf{nand2Tetris} & Blah & \emph{build a modern computer from first principles} & \\
+\end{org}
+
+%============================ Professional Work ================
+\nvssec{Professional}
+
+\begin{org}
+  \textbf{MakerSquare} & Fellow & & 2015-2016
+\end{org}
+
+\begin{roles}
+  \minitem Provided technical guidance to students during completion of two day sprints on varied JavaScript \\
+  \minitem Lead classroom learning of web development basics in a  nightly course \\
+  \minitem Interviewed and evaluated potential candidates for technical ability and cultural fit
+\end{roles}
+
+\begin{org}
+  \textbf{Red Fork Directional, LLC} & Owner / Field Engineer & & 2014 \\
+\end{org}
+
+\begin{roles}
+  \minitem Provided directional drilling consulting services \\
+  \minitem Integrated third party telemetry technology\\
+\end{roles}
+
+\begin{org}
+  \textbf{Halliburton Energy Services} & Field Engineer & & 2010-2013 \\
+\end{org}
+\begin{roles}
+  \minitem Ensured third party hardware was correctly configured to meet engineering specification and project goals\\
+  \minitem Debugged complex systems and equipment to maintain operational efficiency \\
+  \minitem Managed team of fellow engineers to complete projects in timely and efficient manner \\
+\end{roles}
+
+%============================ Education ================
+
+\nvssec{Education}
+
+\begin{org}
+  \textbf{MakerSquare} & & \emph{full-stack software engineering immersive} & 2015 \\
+  \vspace{0.25em}
+\end{org}
+
+\begin{org}
+  \textbf{Univeristy of Wyoming} & & \emph{Engineering and Applied Sciences} & 2004-2010 \\
+\end{org}
+
+\begin{roles}
   \majitem MA Mechanical Engineering \\
-  % \vspace{-1em}
-  \begin{myitemize}
-    %\setlength{\itemsep}{0.1cm}
+  \begin{roles}
     \minitem Research in mateials science and fluid dynamics \\
     \minitem Analyzed data in Fortran and visualized using MATLAB, simulated atomic interactions from first principles\\
-  \end{myitemize}
+  \end{roles}
+\vspace{0.5em}
   \majitem BA Mechanical Engineering $\vert$ merit scholarships and engineering excellence awards $\vert$ \emph{cum laude} \\
-  % \vspace{-1em}
-  \begin{myitemize}
-    \minitem Implemented control systems in robotic projects using \\
-    \minitem microcontrollers and motion control hardware  \\
-  \end{myitemize}
-\end{myitemize}
+  \begin{roles}
+    \minitem Implemented control systems in robotic projects using microcontrollers and motion control hardware  \\
+  \end{roles}
+\end{roles}
+
 \end{document}
