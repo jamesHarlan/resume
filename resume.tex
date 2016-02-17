@@ -3,13 +3,16 @@
 \documentclass[10pt]{article}
 
 %set the page margins
-\usepackage[letterpaper,margin=0.7in]{geometry}
+\usepackage[letterpaper,margin=0.5in]{geometry}
 
 \usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{color}
 \usepackage{multirow}
 \usepackage{enumitem}
+\usepackage{titlesec}
+
+\titleformat*{\section}{\normalsize\bfseries}
 \setlist{nolistsep}
 
 \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
@@ -17,9 +20,9 @@
 \newenvironment{roles}
 { \vspace{0.25em}
   \begin{itemize}
-    \setlength{\itemsep}{-0.5em}
+    \setlength{\itemsep}{-0.75em}
     \setlength{\parskip}{0em}
-    \setlength{\parsep}{0em}
+    \setlength{\parsep}{-0.5em}
     \setlength{\partopsep}{0pt}
     \setlength{\topsep}{0pt}
 }
@@ -42,24 +45,30 @@
   \vspace{-0.25em}
 }
 
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[]
+
 \newcommand*\nvssec{
-  \vspace{-2em}
-  \section*
+  \vspace{-1.5em}
+  \subsection*
 }
 
-\newcommand*\majitem{
-  \vspace{-0.25em}
+\newenvironment{majitem}
+{
+  \vspace{-0.5em}
   \item[]
-  \vspace{-0.25em}
+}
+{
+  \vspace{0.5em}
 }
 
 \begin{document}
 
 \pagenumbering{gobble}
-
+%\href{http://www.jamesharlan.me}{\color{blue}jamesharlan.me}
 \begin{center}
 \begin{tabularx}{1.0\textwidth}{l X r}
-  \multirow{2}{*}{\Huge{James Harlan}}& & \href{http://www.jamesharlan.me}{\color{blue}jamesharlan.me} \\
+  \multirow{2}{*}{\Huge{James Harlan}}& &  \\
    & & \href{https://www.linkedin.com/in/highfalootin}{\color{blue}linkedin.com/in/highfalootin} \\
   San Francisco Bay Area $\vert$ 307 247 3383 $\vert$ \href{mailto:james.harlan@gmail.com}{\color{blue}james.harlan@gmail.com} & & \href{http://github.com/jamesharlan}{\color{blue}github.com/jamesharlan}
 \end{tabularx}
@@ -67,52 +76,58 @@
 \vspace{2mm}
 
 \begin{tabularx}{\textwidth}{r X}
-  \textbf{Strong : } & JavaScript $\cdot$ Angular $\cdot$ Jasmine $\cdot$ jQuery $\cdot$ HTML $\cdot$ CSS $\cdot$ JSON $\cdot$  Agile $\cdot$ Scrum \\
-  \textbf{Proficient : } & Node.JS $\cdot$ Express $\cdot$ Gulp $\cdot$ Grunt $\cdot$ Backbone $\cdot$ MySQL $\cdot$ MongoDB $\cdot$ Socket.IO $\cdot$ D3 $\cdot$ Mocha $\cdot$ Chai $\cdot$ React $\cdot$ Jest \\
+  \textbf{Strong : } & JavaScript $\cdot$ Node.JS $\cdot$ Express $\cdot$ Angular $\cdot$ Jasmine $\cdot$ jQuery $\cdot$ HTML $\cdot$ CSS $\cdot$ JSON $\cdot$  Agile $\cdot$ Scrum \\
+  \textbf{Proficient : } & Gulp $\cdot$ Grunt $\cdot$ Backbone $\cdot$ MySQL $\cdot$ MongoDB $\cdot$ Socket.IO $\cdot$ D3 $\cdot$ Mocha $\cdot$ Chai $\cdot$ React $\cdot$ Jest $\cdot$ AWS \
 \end{tabularx}
 
 \end{center}
-
+\vspace{-0.5em}
 %============================ Recent Projects ==================
 \nvssec{Recent Projects}
+\vspace{-1.5em}
+\noindent\rule{\textwidth}{0.5pt}
 
 \begin{org}
   \textbf{SquirrelSearch} & Team Lead & \emph{mobile treasure hunting web app} & \href{http://squirrelsearch.us}{\color{blue}squirrelsearch.us} \\
 \end{org}
 \begin{roles}
-  \minitem Lead development of product, emphasizing user experience and functionality \\
-  \minitem Specified API to facilitate early integration of data flow \\
-  \minitem Developed user story and corresponding story boards for application view implementation
+  \minitem Lead development of product using Balsamiq wireframing, mockups, and Angular MVC\\
+  \minitem Geotagged photos using HTML5 getUserMedia and geolocation APIs \\
+  \minitem Implemented in-browser photo editing using the Canvas and Angular Directives\\
+  \minitem Worked within a team environment to specify API to facilitate early integration
 \end{roles}
 \vspace{0.25em}
 
 \begin{org}
-  \textbf{JSVS} & Backend Engineer & \emph{live coding app} & \href{https://github.com/TheFourLoops/JSVS}{\color{blue}github} \\
+  \textbf{JSVS} & Fullstack Engineer & \emph{live coding app} & \href{https://github.com/TheFourLoops/JSVS}{\color{blue}github repo}
 \end{org}
 \begin{roles}
   \minitem Connected users in rooms for predictable user experience using WebSockets \\
-  \minitem Deployed codebase to Heroku,
+  \minitem Managed infrastructure changes and releases, deployed codebase to Heroku \\
+  \minitem Designed app branding and user experience
 \end{roles}
 
 \begin{org}
-  \textbf{Murmur} & Scrum Master & \emph{geolocation chat app} & \\
+  \textbf{Murmur} & Scrum Master & \emph{geolocation chat app} & \href{https://github.com/jamesHarlan/murmur}{\color{blue}github repo}\\
 \end{org}
 \begin{roles}
-  \minitem Tested front end components using Jest to maintain a working codebase during feature addition \\
-  \minitem Implemented sorting of message based on user proximity \\
-  \minitem Automated deployment process using Gulp \\
+  \minitem Tested React components using Jest to maintain a working codebase during feature addition \\
+  \minitem Implemented sorting of message based on user proximity using geolocation \\
+  \minitem Automated deployment process using Gulp, performed code review on team commits
 \end{roles}
 
 \begin{org}
-  \textbf{Emirates Travel Hackathon} & 2nd Place Group & \emph{social flight booking app} & \\
+  \textbf{nand2Tetris} & learning project & \emph{build a modern computer from first principles} & \\
 \end{org}
 
-\begin{org}
-  \textbf{nand2Tetris} & Blah & \emph{build a modern computer from first principles} & \\
-\end{org}
+\begin{roles}
+  \minitem Developed von Neuman machine from basic NAND gate, including registers, ALU and CPU
+\end{roles}
 
 %============================ Professional Work ================
 \nvssec{Professional}
+\vspace{-1.5em}
+\noindent\rule{\textwidth}{0.5pt}
 
 \begin{org}
   \textbf{MakerSquare} & Fellow & & 2015-2016
@@ -120,7 +135,7 @@
 
 \begin{roles}
   \minitem Provided technical guidance to students during completion of two day sprints on varied JavaScript \\
-  \minitem Lead classroom learning of web development basics in a  nightly course \\
+  \minitem Classroom instruction of web development basics including HTML, CSS, and JavaScript\\
   \minitem Interviewed and evaluated potential candidates for technical ability and cultural fit
 \end{roles}
 
@@ -129,43 +144,62 @@
 \end{org}
 
 \begin{roles}
-  \minitem Provided directional drilling consulting services \\
-  \minitem Integrated third party telemetry technology\\
+  \minitem Provided directional drilling consulting services and integrated third party telemetry technology\\
+  \minitem Managed team of fellow engineers to complete projects in timely and efficient manner
 \end{roles}
 
 \begin{org}
   \textbf{Halliburton Energy Services} & Field Engineer & & 2010-2013 \\
 \end{org}
 \begin{roles}
-  \minitem Ensured third party hardware was correctly configured to meet engineering specification and project goals\\
+  \minitem Analyzed real time data to monitor wellbore conditions and varied input parameters to increase efficiency\\
   \minitem Debugged complex systems and equipment to maintain operational efficiency \\
-  \minitem Managed team of fellow engineers to complete projects in timely and efficient manner \\
+  \minitem Ensured third party hardware was correctly configured to meet engineering specification and project goals\
 \end{roles}
 
 %============================ Education ================
 
-\nvssec{Education}
+\nvssec{Awards}
+\vspace{-1.5em}
+\noindent\rule{\textwidth}{0.5pt}
 
 \begin{org}
-  \textbf{MakerSquare} & & \emph{full-stack software engineering immersive} & 2015 \\
-  \vspace{0.25em}
+  \textbf{Emirates Travel Hackathon} & 2nd Place Group & \emph{social flight booking app} & \\
 \end{org}
+%============================ Education ================
+
+\nvssec{Education}
+\vspace{-1.5em}
+\noindent\rule{\textwidth}{0.5pt}
+
+% \begin{org}
+%   \textbf{MakerSquare} & & \emph{full-stack software engineering immersive} & 2015\
+%   \vspace{0.25em}
+% \end{org}
 
 \begin{org}
-  \textbf{Univeristy of Wyoming} & & \emph{Engineering and Applied Sciences} & 2004-2010 \\
+  \textbf{Univeristy of Wyoming} & & \emph{Engineering and Applied Sciences} & 2004-2010
 \end{org}
 
 \begin{roles}
-  \majitem MA Mechanical Engineering \\
+  \begin{majitem}
+    MA Mechanical Engineering
+  \end{majitem}
   \begin{roles}
-    \minitem Research in mateials science and fluid dynamics \\
-    \minitem Analyzed data in Fortran and visualized using MATLAB, simulated atomic interactions from first principles\\
+    \minitem Research in materials science and fluid dynamics, designed and performed laboratory experiments \\
+    \minitem Analyzed data using Fortran and visualized using MATLAB, simulated atomic interactions\\
   \end{roles}
-\vspace{0.5em}
-  \majitem BA Mechanical Engineering $\vert$ merit scholarships and engineering excellence awards $\vert$ \emph{cum laude} \\
+
+  \begin{majitem}
+    BA Mechanical Engineering $\vert$ merit scholarships and engineering excellence awards $\vert$ \emph{cum laude}
+  \end{majitem}
   \begin{roles}
-    \minitem Implemented control systems in robotic projects using microcontrollers and motion control hardware  \\
+    \minitem Implemented control systems in robotic projects using Atmel microcontrollers and stepper motors  \
   \end{roles}
 \end{roles}
+\nvssec{Personal}
+\vspace{-1.5em}
+\noindent\rule{\textwidth}{0.5pt}
+\indent I have rural ranch roots where I developed a strong work ethic and desire to build.  I have been interested in the use of technology to solve complex problems my entire life.  This engineering passion has lead me initially to mechanical engineering, then horizontal drilling, and finally to software.  I enjoy outdoor activities such as hiking, skiing and travelling to new places on my motorcycle.
 
 \end{document}
