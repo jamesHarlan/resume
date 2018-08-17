@@ -1,4 +1,7 @@
-.DS_Store
-resume.*
-!resume.pdf
-!resume.tex
+*.aux
+*.fls
+*.out
+*.log
+*.fdb_latexmk
+*.sty
+*.gz
