@@ -1,9 +1,9 @@
 % LaTex file for resume
 % James Harlan
-\documentclass[10pt]{article}
+\documentclass[12pt]{article}
 
 %set the page margins
-\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[letterpaper,margin=0.6in]{geometry}
 
 \usepackage{hyperref}
 \usepackage{tabularx}
@@ -32,7 +32,7 @@
 
 \newenvironment{org}
 { \noindent
-  \tabularx{\textwidth}{p{5cm} p{4cm} r Y }
+  \tabularx{\textwidth}{p{6cm} p{4.5cm} r Y }
 }
 {
   \endtabularx
@@ -69,74 +69,46 @@
 \begin{center}
 \begin{tabularx}{1.0\textwidth}{l X r}
   \multirow{2}{*}{\Huge{James Harlan}}& &  \\
-   & & \href{https://www.linkedin.com/in/highfalootin}{\color{blue}linkedin.com/in/highfalootin} \\
-  Sacramento $\vert$ 307 247 3383 $\vert$ \href{mailto:james.harlan@gmail.com}{\color{blue}james.harlan@gmail.com} & & \href{http://github.com/jamesharlan}{\color{blue}github.com/jamesharlan}
+   & \\
+  Sheridan, WY $\vert$ 307 247 3383 $\vert$ \href{mailto:ears@fastmail.com}{\color{blue}ears@fastmail.com} & & \href{http://github.com/jamesharlan}{\color{blue}github.com/jamesharlan}
 \end{tabularx}
 
-\vspace{2mm}
+\vspace{0.75em}
 
 \begin{tabularx}{\textwidth}{r X}
-  \textbf{Strong : } & JavaScript $\cdot$ Node.JS $\cdot$ Express $\cdot$ Angular $\cdot$ Jasmine $\cdot$ jQuery $\cdot$ HTML $\cdot$ CSS $\cdot$ JSON $\cdot$  Agile $\cdot$ Scrum \\
-  \textbf{Proficient : } & Gulp $\cdot$ Grunt $\cdot$ Backbone $\cdot$ MySQL $\cdot$ MongoDB $\cdot$ Socket.IO $\cdot$ D3 $\cdot$ Mocha $\cdot$ Chai $\cdot$ React $\cdot$ Jest $\cdot$ AWS \
+  \textbf{Strong : } & TypeScript $\cdot$ JavaScript  $\cdot$ Angular $\cdot$ Rxjs $\cdot$ Jasmine $\cdot$ Selenium $\cdot$ Less $\cdot$  Agile $\cdot$ Scrum \\
+  \textbf{Proficient : } & VSTS $\cdot$ TFS $\cdot$ Git $\cdot$ Webpack $\cdot$ PowerShell $\cdot$ C\# 
 \end{tabularx}
 
 \end{center}
-\vspace{-0.5em}
-%============================ Recent Projects ==================
-\nvssec{Recent Projects}
-\vspace{-1.5em}
-\noindent\rule{\textwidth}{0.5pt}
-
-\begin{org}
-  \textbf{SquirrelSearch} & Product Owner/Engineer & \emph{mobile treasure hunting web app} & \href{http://squirrelsearch.us}{\color{blue}squirrelsearch.us} \\
-\end{org}
-\begin{roles}
-  \minitem Lead development of product using scrum methodology and daily standups\\
-  \minitem Developed process for geotagging photos using HTML5 getUserMedia and geolocation APIs \\
-  \minitem Implemented in-browser photo editing using Canvas and Angular Directives\\
-  \minitem Integrated software architecture and specified application APIs
-\end{roles}
-\vspace{0.25em}
-
-\begin{org}
-  \textbf{JSVS} & Fullstack Engineer & \emph{live coding app} & \href{https://github.com/TheFourLoops/JSVS}{\color{blue}github repo}
-\end{org}
-\begin{roles}
-  \minitem Connected users in rooms for predictable user experience using WebSockets and Angular MVC\\
-  \minitem Managed infrastructure changes and releases, deployed codebase to Heroku \\
-  \minitem Designed app branding and user experience
-\end{roles}
-
-\begin{org}
-  \textbf{Murmur} & Scrum Master & \emph{location based chat app} & \href{https://github.com/jamesHarlan/murmur}{\color{blue}github repo}\\
-\end{org}
-\begin{roles}
-  \minitem Tested React components using Jest to maintain a working codebase during feature addition \\
-  \minitem Implemented sorting of message based on user proximity using geolocation \\
-  \minitem Automated deployment process using Gulp, performed code review on team commits
-\end{roles}
-
-\begin{org}
-  \textbf{nand2Tetris} & learning project & \emph{build a modern computer from first principles} & \\
-\end{org}
-
-\begin{roles}
-  \minitem Developed von Neuman machine from basic NAND gate, including registers, ALU and CPU
-\end{roles}
+\vspace{0.75em}
 
 %============================ Professional Work ================
 \nvssec{Professional}
-\vspace{-1.5em}
+\vspace{-0.5em}
 \noindent\rule{\textwidth}{0.5pt}
+\vspace{0.25em}
 
 \begin{org}
-  \textbf{MakerSquare} & Fellow & & 2015-2016
+  \textbf{OSIsoft} & Software Developer & & 2016-2018
 \end{org}
 
 \begin{roles}
-  \minitem Provided technical guidance to students during completion of two day sprints on varied JavaScript \\
-  \minitem Classroom instruction of web development basics including HTML, CSS, and JavaScript\\
-  \minitem Interviewed and evaluated potential candidates for technical ability and cultural fit
+  \minitem Developed web based administrative configuration and dashboard applications \\
+  \minitem Architected frontend solutions according to mockups and program management \\
+  \minitem Implemented performant rendering of relevant application state and telemetry \\
+  \minitem Performed testing using established testing strategies including unit, integration, and end to end \\
+  \minitem Attended regional company events to promote new software products
+\end{roles}
+
+\begin{org}
+  \textbf{Hack Reactor} & Fellow & & 2015-2016
+\end{org}
+
+\begin{roles}
+  \minitem Provided technical guidance to students while learning JavaScript fundamentals \\ 
+  \minitem Classroom instruction of web development basics including HTML, CSS, and JavaScript \\
+  \minitem Interviewed and evaluated potential candidates for technical ability and cultural fit 
 \end{roles}
 
 \begin{org}
@@ -144,62 +116,51 @@
 \end{org}
 
 \begin{roles}
-  \minitem Integrated third party telemetry technology and provided directional drilling consulting services  \\
-  \minitem Worked in a interdisciplinary team to plan and execute complex projects within strict deadlines
+  \minitem Provided directional drilling consulting services  \\
+  \minitem Worked with third party MWD service providers to select and configure appropriate components 
 \end{roles}
 
 \begin{org}
   \textbf{Halliburton Energy Services} & Field Engineer & & 2010-2013 \\
 \end{org}
 \begin{roles}
-  \minitem Analyzed real time data to monitor wellbore conditions and varied input parameters to prevent equipment failures\\
-  \minitem Debugged complex systems and equipment to maintain operational efficiency \\
-  \minitem Ensured third party hardware was correctly configured to meet engineering specification and project goals\
+  \minitem Optimized drilling parameters to minimize downtime and increase operational efficiency \\
+  \minitem Provided on site directional drilling services \\
+  \minitem Designed bottom hole assemblies to meet project specifications
 \end{roles}
 
-%============================ Education ================
+\vspace{1em}
 
-\nvssec{Awards}
-\vspace{-1.5em}
-\noindent\rule{\textwidth}{0.5pt}
 
-\begin{org}
-  \textbf{Emirates Travel Hackathon} & 2nd Place Team & \emph{social flight booking app} & \\
-\end{org}
 %============================ Education ================
 
 \nvssec{Education}
-\vspace{-1.5em}
-\noindent\rule{\textwidth}{0.5pt}
 
-% \begin{org}
-%   \textbf{MakerSquare} & & \emph{full-stack software engineering immersive} & 2015\
-%   \vspace{0.25em}
-% \end{org}
+\vspace{-0.5em}
+\noindent\rule{\textwidth}{0.5pt}
+\vspace{0.25em}
 
 \begin{org}
-  \textbf{Univeristy of Wyoming} & & \emph{Engineering and Applied Sciences} & 2004-2010
+ \textbf{Hack Reactor} & & \emph{software engineering immersive} & 2015\
+\end{org}
+
+\begin{org}
+  \textbf{Univeristy of Wyoming} & & \emph{Engineering \& Applied Sciences} & 2010
 \end{org}
 
 \begin{roles}
+  
   \begin{majitem}
-    MS Mechanical Engineering
+    BA/MS Mechanical Engineering $\vert$ merit scholarships, engineering excellence awards $\vert$ \emph{cum laude}
   \end{majitem}
-  \begin{roles}
-    \minitem Research in materials science and fluid dynamics, designed and performed laboratory experiments \\
-    \minitem Analyzed data using Fortran and visualized using MATLAB, simulated atomic interactions\\
-  \end{roles}
 
-  \begin{majitem}
-    BA Mechanical Engineering $\vert$ merit scholarships and engineering excellence awards $\vert$ \emph{cum laude}
-  \end{majitem}
-  \begin{roles}
-    \minitem Implemented control systems in robotic projects using Atmel microcontrollers and stepper motors  \
-  \end{roles}
+ 
 \end{roles}
+
+
 \nvssec{Personal}
 \vspace{-1.5em}
 \noindent\rule{\textwidth}{0.5pt}
-\indent I have rural ranch roots where I developed a strong work ethic and desire to build.  I have been interested in the use of technology to solve complex problems my entire life.  My engineering passion has lead me to the fields of mechanical engineering, horizontal drilling, and software.  I enjoy outdoor activities such as hiking, skiing and traveling to new places.
+\indent I have rural ranch roots where I developed a strong work ethic and desire to build.  I have been interested in the use of technology to solve complex problems my entire life.  My engineering passion has lead me to the fields of mechanical engineering, horizontal drilling, and software.  I enjoy spending time with my family.
 
 \end{document}
