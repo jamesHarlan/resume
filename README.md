@@ -1,3 +1,3 @@
 # Resume
 
-I am currently looking for work remote web development work.  
+I am currently looking for remote web development work.  
